@@ -1,0 +1,69 @@
+{% load static %}
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-user"></i> Trainee</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'student_list' %}">
+                            <i class="nav-icon icon-puzzle"></i> Trainee List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'attendance_count' %}">
+                            <i class="nav-icon icon-puzzle"></i> Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'student_regi' %}">
+                            <i class="nav-icon icon-puzzle"></i> Registration</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-user"></i> Mentor</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'teacher_list' %}">
+                            <i class="nav-icon icon-puzzle"></i> Mentor List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create_teacher' %}">
+                            <i class="nav-icon icon-puzzle"></i> Create New Mentor</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-user"></i> Employees</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'employee_list' %}">
+                            <i class="nav-icon icon-puzzle"></i> Employee List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create_employee' %}">
+                            <i class="nav-icon icon-puzzle"></i> Create Employee</a>
+                    </li>
+                    
+                </ul>
+                <li>
+                    
+                        {% comment %} <a class="nav-link" href="{% url 'view_course' %}"> {% endcomment %}
+                            {% comment %} <i class="nav-icon icon-puzzle"></i> Add Course </a> {% endcomment %}
+                    
+                        </li>
+            </li>
+        </ul>
+       
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+
+    {% block sidebar %}
+    {% endblock %}
+</div>
+
